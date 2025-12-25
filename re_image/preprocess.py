@@ -1,6 +1,6 @@
 import cv2
 
-def resize_image(image_bgr, width=1280, height=800, keep_ratio=False):
+def resize_image(image_bgr, width=1280, height=800, keep_ratio=True):
     h, w = image_bgr.shape[:2]
 
     # ถ้าขนาดตรงแล้ว ไม่ resize ซ้ำ

@@ -7,7 +7,7 @@ from re_image.mask_regions import mask_image_with_regions
 
 REGIONS = {
     "citizen_id": (554, 82, 421, 54),
-    "name_lastname_th": (355, 148, 885, 99),
+    "name_lastname_th": (355, 148, 885, 110),
     "name_eng": (495, 240, 554, 54),
     "lastname_eng": (561, 293, 519, 47),
     "birthday": (550, 340, 279, 66),
