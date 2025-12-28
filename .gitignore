@@ -2,3 +2,7 @@ image/
 .env
 .venv/
 __pycache__/
+debug/
+debug_crops/
+ocr_raw.txt
+ocr_result.txt
