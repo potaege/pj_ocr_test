@@ -5,6 +5,9 @@ from filter_world.help_filter.name_eng import split_name_eng
 from filter_world.help_filter.english_only import keep_english_words
 from filter_world.help_filter.thai_date import convert_thai_date
 from filter_world.help_filter.religion_th import normalize_religion_th
+from filter_world.help_filter.address import parse_admin_from_address
+from filter_world.data.address.loader_address import load_thai_admin_data
+PROVINCES, DISTRICTS, SUB_DISTRICTS = load_thai_admin_data()
 
 def receive_thai_id_ocr_data(ocr_data: dict):
 
@@ -22,6 +25,13 @@ def receive_thai_id_ocr_data(ocr_data: dict):
     birthday , valid_birthday = convert_thai_date(result.get("birthday", ""))
     religion, valid_religion = normalize_religion_th(result.get("religion", ""))
     ## ที่อยู่
+    addr_rest, sub_th, dist_th, prov_th, addr_ok = parse_admin_from_address(
+        result.get("address", ""),
+        PROVINCES,
+        DISTRICTS,
+        SUB_DISTRICTS
+    )
+
     issue_date, valid_issue_date = convert_thai_date(result.get("issue_date", ""))
     expiry_date, valid_expiry_date = convert_thai_date(result.get("expiry_date", ""))
 
@@ -48,6 +58,11 @@ def receive_thai_id_ocr_data(ocr_data: dict):
     output_result['valid_religion'] = valid_religion
 
     ##ที่อยู่
+    output_result["address_rest"] = addr_rest
+    output_result["sub_district_th"] = sub_th
+    output_result["district_th"] = dist_th
+    output_result["province_th"] = prov_th
+    output_result["address_valid"] = addr_ok
 
     output_result['issue_date'] = issue_date
     output_result['valid_issue_date'] = valid_issue_date
@@ -71,7 +86,7 @@ def main():
         'lastname_eng': 'min general Chokkulthawat',
         'birthday': 'min general 22 มี.ค. 2547',
         'religion': 'min general พุทธ',
-        'address': 'min general ที่อยู่ 130 ถ.คู้บอน แขวงรามอินทรา เขตคันนายาว กรุงเทพมหานคร', ## เหลืออันนี้
+        'address': 'min general ที่อยู่ 130 ถ.คู้บอน แขวงรามอินา เขตคนนายาว กรงเทพมหานคร', ## เหลืออันนี้
         'issue_date': 'min general 7 เม.ย. 2562',
         'expiry_date': 'min general 21 มี.ค. 2571'
         }

@@ -1,5 +1,5 @@
 import cv2
-
+import json
 from ocr.model import run_ocr
 from ocr.utils import collect_texts, unique_keep_order, to_debug_string
 from re_image.preprocess import resize_image
@@ -62,11 +62,15 @@ def process_thai_id_image(image_path: str, output_txt="ocr_result.txt", raw_txt=
         for k in REGIONS.keys():
             f.write(f"{k}: {results.get(k, '')}\n")
 
-    print(results)
-
-    print(f"✅ Done | saved={output_txt} | raw={raw_txt}")
+    
 
     results_filter = receive_thai_id_ocr_data(results)
+    output_filter_txt = "results_filter"
+
+    with open(output_filter_txt, "w", encoding="utf-8") as f:
+        json.dump(results_filter, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Done | saved={output_txt} | raw={raw_txt} | filter={output_filter_txt}")
 
 
 if __name__ == "__main__":
