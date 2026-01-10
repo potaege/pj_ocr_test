@@ -16,16 +16,16 @@ THAI_RELIGIONS = [
 def normalize_religion_th(text: str, threshold: int = 50):
     
     if not isinstance(text, str):
-        return "", False, "not_string", 0, ""
+        return "", False
 
     s = text.strip()
     if not s:
-        return "", False, "empty", 0, ""
+        return "", False
 
     # 1) ตรวจว่าเป็นภาษาไทยล้วน (อนุญาต ช่องว่าง และ จุด และ ขีด)
     # ถ้าคุณ "ต้องการไทยล้วน 100%" จริง ๆ ให้ใช้ pattern นี้
     if re.fullmatch(r"[ก-๙\s\.\-]+", s) is None:
-        return "", False, "not_thai_only", 0, ""
+        return "", False
 
     # 2) fuzzy match
     match = process.extractOne(s, THAI_RELIGIONS, scorer=fuzz.ratio)

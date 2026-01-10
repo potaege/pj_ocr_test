@@ -8,7 +8,7 @@ from paddleocr import PaddleOCR
 # ตัวปกติ
 ocr = PaddleOCR(lang="th", use_textline_orientation=True)
 
-# ✅ ตัวที่ปิดการเดาองศาเอกสาร/แก้เอกสาร (กันหมุนมั่ว)
+# ตัวที่ปิดการเดาองศาเอกสาร/แก้เอกสาร (กันหมุนมั่ว)
 ocr_no_doc = PaddleOCR(
     lang="th",
     use_textline_orientation=True,
@@ -24,6 +24,7 @@ ocr_raw = PaddleOCR(
 )
 
 def run_ocr(image_bgr, no_doc: bool = False, no_textline: bool = False):
+    
     if no_doc and no_textline:
         engine = ocr_raw
     elif no_doc:

@@ -9,14 +9,14 @@ from filter_world.check_documents.check_thai_id import receive_thai_id_ocr_data
 
 REGIONS = {
     "citizen_id": (554, 82, 421, 54 ,False), ##พิกัดcrop 4ตัวหน้า แล้วตัวท้ายสุดคือ ต้องการให้ ภาพที่มีพื้นหลังสีอื่นทำให้กลายเป็นสีขาวไหม
-    "name_lastname_th": (352, 147, 895, 89,False),
-    "name_eng": (495, 240, 554, 54,False),
-    "lastname_eng": (561, 293, 519, 47,False),
-    "birthday": (550, 340, 279, 66,False),
-    "religion": (529, 470, 122, 47,False),
+    "name_lastname_th": (355 ,149, 889, 93,True),
+    "name_eng": (495, 240, 554, 54,True),
+    "lastname_eng": (561, 293, 519, 47,True),
+    "birthday": (550, 340, 279, 66,True),
+    "religion": (529, 470, 122, 47,True),
     "address": (135, 511, 763, 121,True),
-    "issue_date": (137, 632, 190, 38,False),
-    "expiry_date": (700, 623, 192, 45,False),
+    "issue_date": (137, 632, 190, 38,True),
+    "expiry_date": (700, 623, 192, 45,True),
 }
 
 def process_thai_id_image(image_path: str, output_txt="ocr_result.txt", raw_txt="ocr_raw.txt"):
@@ -41,6 +41,23 @@ def process_thai_id_image(image_path: str, output_txt="ocr_result.txt", raw_txt=
 
         is_addr = (field == "address") 
         res, used_api = run_ocr(crop , no_doc=is_addr, no_textline=is_addr)
+
+        # if field == "address":
+        #     res, used_api = run_ocr(crop,no_doc=True,no_textline=True)
+        
+        # elif field in (
+        #     "citizen_id",
+        #     "name_lastname_th",
+        #     "birthday",
+        #     "religion",
+        #     "issue_date",
+        #     "expiry_date"
+        # ):
+        #     res, used_api = run_ocr(
+        #         crop,no_doc=False,no_textline=False )
+        
+        # else:
+        #     res, used_api = run_ocr(crop,no_doc=False,no_textline=False)
 
         # เก็บ raw debug แยกตาม field
         raw_parts.append(f"\n=== {field} | API={used_api} ===\n")
@@ -74,4 +91,4 @@ def process_thai_id_image(image_path: str, output_txt="ocr_result.txt", raw_txt=
 
 
 if __name__ == "__main__":
-    process_thai_id_image("image/thai_id/main_id.jpg")
+    process_thai_id_image("image/thai_id/real_main_id.jpg")

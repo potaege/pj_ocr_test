@@ -85,8 +85,8 @@ def main():
         'name_eng': 'min general Mr. Treethawat',
         'lastname_eng': 'min general Chokkulthawat',
         'birthday': 'min general 22 มี.ค. 2547',
-        'religion': 'min general พุทธ',
-        'address': 'min general ที่อยู่ 130 ถ.คู้บอน แขวงรามอินา เขตคนนายาว กรงเทพมหานคร', ## เหลืออันนี้
+        'religion': 'min general guเ',
+        'address': 'min general ที่อยู130 ถ.คู้บอน แขวงรามอินทรา เขตคันนายาว กรงเทพมหานคร - −', ## เหลืออันนี้
         'issue_date': 'min general 7 เม.ย. 2562',
         'expiry_date': 'min general 21 มี.ค. 2571'
         }

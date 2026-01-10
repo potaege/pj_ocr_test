@@ -11,3 +11,5 @@ ocr_result_house_registration.txt
 ocr_result_passport.txt
 ocr_raw_house_registration.txt
 ocr_raw_passport.txt
+*jpg
+*png

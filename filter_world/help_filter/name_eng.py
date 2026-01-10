@@ -13,8 +13,11 @@ def split_name_eng(s: str):
     if not s:
         return "", "", False
 
-    # 1) ต้องมีตัวอักษรอังกฤษ
-    if re.search(r"[A-Za-z]", s) is None:
+    s = re.sub(r"[^A-Za-z\.\s]", " ", s)
+
+    # normalize space
+    s = re.sub(r"\s+", " ", s).strip()
+    if not s:
         return "", "", False
 
     parts = s.split()
