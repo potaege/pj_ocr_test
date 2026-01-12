@@ -1,22 +1,11 @@
 import cv2
-
+import json
 from ocr.model import run_ocr
 from ocr.utils import collect_texts, unique_keep_order, to_debug_string
 from re_image.preprocess import resize_image
 from re_image.mask_regions import mask_image_with_regions
-from re_image.crop_regions import crop_regions 
-
-# REGIONS = {
-#     "citizen_id": (554, 82, 421, 54 ,False), ##พิกัดcrop 4ตัวหน้า แล้วตัวท้ายสุดคือ ต้องการให้ ภาพที่มีพื้นหลังสีอื่นทำให้กลายเป็นสีขาวไหม
-#     "name_lastname_th": (352, 147, 895, 89,False),
-#     "name_eng": (495, 240, 554, 54,False),
-#     "lastname_eng": (561, 293, 519, 47,False),
-#     "birthday": (550, 340, 279, 66,False),
-#     "religion": (529, 470, 122, 47,False),
-#     "address": (135, 511, 763, 121,True),
-#     "issue_date": (137, 632, 190, 38,False),
-#     "expiry_date": (700, 623, 192, 45,False),
-# }
+from re_image.crop_regions import crop_regions
+from filter_world.check_documents.check_passport import receive_passport_ocr_data
 
 REGIONS = {
     "passport_no":   (815, 100, 180, 30, True),
@@ -77,8 +66,13 @@ def process_passport_image(image_path: str, output_txt="ocr_result_passport.txt"
         for k in REGIONS.keys():
             f.write(f"{k}: {results.get(k, '')}\n")
 
-    print(f"✅ Done | saved={output_txt} | raw={raw_txt}")
+    results_filter = receive_passport_ocr_data(results)
+    output_filter_passport = "results_filter_passport"
 
+    with open(output_filter_passport, "w", encoding="utf-8") as f:
+        json.dump(results_filter, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Done | saved={output_txt} | raw={raw_txt} | filter={output_filter_passport}")
 
 if __name__ == "__main__":
     process_passport_image("image/passport/01.jpg")

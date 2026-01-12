@@ -1,27 +1,16 @@
 import cv2
-
+import json
 from ocr.model import run_ocr
 from ocr.utils import collect_texts, unique_keep_order, to_debug_string
 from re_image.preprocess import resize_image
 from re_image.mask_regions import mask_image_with_regions
-from re_image.crop_regions import crop_regions 
-
-# REGIONS = {
-#     "้house_no":   (255, 110, 315, 70, True),
-#     "registry_office":  (785, 110, 390, 70, True),
-#     "address":          (165, 180, 870, 130, True),
-#     "village_name":  (165, 330, 420, 70, True),
-#     "house_name": (710, 330, 450, 70, True),
-#     "house_type":  (165, 400, 420, 70, True),
-#     "house_specification":   (765, 400, 450, 70, True),
-#     "date_of_registration": (350, 480, 350, 60, True),
-#     "date_of_print_house_registration": (950, 660, 270, 50, True),
-# }
+from re_image.crop_regions import crop_regions
+from filter_world.check_documents.check_thai_id import receive_house_registration_ocr_data
 
 REGIONS = {
     "้house_no":   (255, 110, 315, 70, False),
     "registry_office":  (785, 110, 390, 70, False),
-    "address":          (165, 180, 870, 130, True),
+    "address":          (165, 180, 870, 130, True), # address มีแล้ว
     "village_name":  (165, 330, 420, 70, False),
     "house_name": (710, 330, 450, 70, True),
     "house_type":  (165, 400, 420, 70, False),
@@ -73,8 +62,13 @@ def process_house_registration_image(image_path: str, output_txt="ocr_result_hou
         for k in REGIONS.keys():
             f.write(f"{k}: {results.get(k, '')}\n")
 
-    print(f"✅ Done | saved={output_txt} | raw={raw_txt}")
+    results_filter = receive_house_registration_ocr_data(results)
+    output_filter_txt = "results_filter"
 
+    with open(output_filter_txt, "w", encoding="utf-8") as f:
+        json.dump(results_filter, f, ensure_ascii=False, indent=2)
+
+    print(f"✅ Done | saved={output_txt} | raw={raw_txt}")
 
 if __name__ == "__main__":
     process_house_registration_image("image/house_registration/01.png")
