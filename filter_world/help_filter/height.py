@@ -5,8 +5,8 @@ def check_height(text: str):
     t = text.upper().strip()
 
     # Fix OCR common errors
-    # t = t.replace(",", ".")
-    # t = t.replace("I", "1")
+    t = t.replace(",", ".")
+    t = t.replace("I", "1")
 
     import re
     pattern = r'^[0-2]\.\d{2}\s?M$'

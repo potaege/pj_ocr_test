@@ -1,7 +1,8 @@
 import re
 
 ENG_PREFIXES = [
-    "Mr.", "Mrs.", "Ms.", "Miss", "Dr.", "Prof."
+    "Mr.", "Mrs.", "Ms.", "Miss", "Dr.", "Prof.",
+    "MR.", "MRS.", "MS.", "MISS", "DR.", "PROF."
 ]
 
 def split_name_eng(s: str):
