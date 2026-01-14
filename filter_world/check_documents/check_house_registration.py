@@ -1,7 +1,6 @@
 from filter_world.help_filter.common import remove_prefix
 from filter_world.help_filter.check_number_length import check_number_length
 from filter_world.help_filter.name_lastName_th import name_lastname_th
-from filter_world.help_filter.name_eng import split_name_eng
 from filter_world.help_filter.english_only import keep_english_words
 from filter_world.help_filter.thai_date import convert_thai_date
 from filter_world.help_filter.religion_th import normalize_religion_th
@@ -18,57 +17,50 @@ def receive_house_registration_ocr_data(ocr_data: dict):
     for k, v in result.items():
         result[k] = remove_prefix(v)
 
-    value_thai_id, valid_thai_id = check_number_length(result.get("citizen_id", ""),13)
-    prefix_name_th,name_th,last_name_th,valid_name_last_name_th = name_lastname_th(result.get("name_lastname_th", ""))
-    prefix_name_eng,name_eng,valid_name_eng = split_name_eng(result.get("name_eng", ""))
-    last_name_eng,valid_last_name_eng = keep_english_words(result.get("lastname_eng", ""))
-    birthday , valid_birthday = convert_thai_date(result.get("birthday", ""))
-    religion, valid_religion = normalize_religion_th(result.get("religion", ""))
-    ## ที่อยู่
+    value_house_no, valid_house_no = check_number_length(result.get("house_no", ""),11)
+    # registry_office, valid_registry_office = name_lastname_th(result.get("registry_office", ""))
     addr_rest, sub_th, dist_th, prov_th, addr_ok = parse_admin_from_address(
         result.get("address", ""),
         PROVINCES,
         DISTRICTS,
         SUB_DISTRICTS
     )
+    # village_name, valid_village_name = keep_english_words(result.get("village_name", ""))
+    # house_name, valid_house_name = keep_english_words(result.get("house_name", ""))
+    # house_type , valid_house_type = convert_thai_date(result.get("house_type", ""))
+    # house_specification, valid_house_specification = normalize_religion_th(result.get("house_specification", ""))
+    date_of_registration, valid_date_of_registration = convert_thai_date(result.get("date_of_registration", ""))
+    date_of_print_house_registration, valid_date_of_print_house_registration = convert_thai_date(result.get("date_of_print_house_registration", ""))
 
-    issue_date, valid_issue_date = convert_thai_date(result.get("issue_date", ""))
-    expiry_date, valid_expiry_date = convert_thai_date(result.get("expiry_date", ""))
+    output_result["house_no"] = value_house_no 
+    output_result["house_no_valid"] = valid_house_no
 
+    # output_result['registry_office'] = registry_office
+    # output_result['registry_office_valid'] = valid_registry_office
 
-    output_result["citizen_id"] = value_thai_id 
-    output_result["citizen_id_valid"] = valid_thai_id
-
-    output_result['prefix_name_th'] = prefix_name_th
-    output_result['name_th'] = name_th
-    output_result['last_name_th'] = last_name_th
-    output_result['valid_name_last_name_th'] = valid_name_last_name_th
-
-    output_result['prefix_name_eng'] = prefix_name_eng
-    output_result['name_eng'] = name_eng
-    output_result['valid_name_eng'] = valid_name_eng
-
-    output_result['last_name_eng'] = last_name_eng
-    output_result['valid_last_name_eng'] = valid_last_name_eng
-
-    output_result['birthday'] = birthday
-    output_result['valid_birthday'] = valid_birthday
-
-    output_result['religion'] = religion
-    output_result['valid_religion'] = valid_religion
-
-    ##ที่อยู่
     output_result["address_rest"] = addr_rest
     output_result["sub_district_th"] = sub_th
     output_result["district_th"] = dist_th
     output_result["province_th"] = prov_th
     output_result["address_valid"] = addr_ok
 
-    output_result['issue_date'] = issue_date
-    output_result['valid_issue_date'] = valid_issue_date
+    # output_result['village_name'] = village_name
+    # output_result['valid_village_name'] = valid_village_name
 
-    output_result['expiry_date'] = expiry_date
-    output_result['valid_expiry_date'] = valid_expiry_date
+    # output_result['house_name'] = house_name
+    # output_result['valid_house_name'] = valid_house_name
+    
+    # output_result['house_type'] = house_type
+    # output_result['valid_house_type'] = valid_house_type
+
+    # output_result['house_specification'] = house_specification
+    # output_result['valid_house_specification'] = valid_house_specification
+
+    output_result['date_of_registration'] = date_of_registration
+    output_result['valid_date_of_registration'] = valid_date_of_registration
+
+    output_result['date_of_print_house_registration'] = date_of_print_house_registration
+    output_result['valid_date_of_print_house_registration'] = valid_date_of_print_house_registration
 
     print("📥 รับข้อมูลจาก house_registration แล้ว")
   
