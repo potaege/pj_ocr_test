@@ -7,6 +7,8 @@ debug_crops/
 ocr_raw.txt
 ocr_result.txt
 results_filter
+results_filter_passport
+results_filter_house_registration
 ocr_result_house_registration.txt
 ocr_result_passport.txt
 ocr_raw_house_registration.txt

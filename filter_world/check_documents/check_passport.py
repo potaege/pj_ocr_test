@@ -9,7 +9,7 @@ from filter_world.help_filter.height import check_height
 from filter_world.help_filter.name_lastName_th import name_lastname_th
 from filter_world.help_filter.name_eng import split_name_eng
 from filter_world.help_filter.english_only import keep_english_words
-from filter_world.help_filter.address import parse_admin_from_address
+from filter_world.help_filter.passport_province import parse_province_en
 from filter_world.help_filter.eng_date import convert_english_date
 from filter_world.data.address.loader_address import load_thai_admin_data
 PROVINCES, DISTRICTS, SUB_DISTRICTS = load_thai_admin_data()
@@ -33,7 +33,7 @@ def receive_passport_ocr_data(ocr_data: dict):
     date_of_birth, valid_date_of_birth = convert_english_date(result.get("date_of_birth", ""))
     sex, valid_sex = check_sex(result.get("sex", ""))
     height, valid_height = check_height(result.get("height", ""))
-    # place_of_birth, valid_place_of_birth = parse_admin_from_address(result.get("place_of_birth", ""),PROVINCES)
+    place_of_birth, valid_place_of_birth = parse_province_en(result.get("place_of_birth", ""), PROVINCES)
     issue_date, valid_issue_date = convert_english_date(result.get("issue_date", ""))
     expiry_date, valid_expiry_date = convert_english_date(result.get("expiry_date", ""))
 
@@ -71,8 +71,8 @@ def receive_passport_ocr_data(ocr_data: dict):
     output_result['height'] = height
     output_result['valid_height'] = valid_height
 
-    # output_result['place_of_birth'] = place_of_birth
-    # output_result['valid_place_of_birth'] = valid_place_of_birth
+    output_result['place_of_birth'] = place_of_birth
+    output_result['valid_place_of_birth'] = valid_place_of_birth
 
     output_result['issue_date'] = issue_date
     output_result['valid_issue_date'] = valid_issue_date
@@ -90,14 +90,14 @@ def main():
         'passport_no': 'XXXXXXX', # ผ่าน
         'country_code': 'XXXXXXX', # ผ่าน
         'type': 'XXXXXXX', # ผ่าน
-        'last_name_en': 'XXXXXXX', # แก้ไข
-        'first_name_en': 'XXXXXXX', # แก้ไข
+        'last_name_en': 'XXXXXXX', # ผ่าน
+        'first_name_en': 'XXXXXXX', # ผ่าน
         'full_name_th': 'XXXXXXX', # ยังไม่ได้ทำ <<<<
         'nationality': 'XXXXXXX', # ผ่าน
         'date_of_birth': 'XXXXXXX', # ผ่าน
         'sex': 'XXXXXXX', # ผ่าน
         'height': 'XXXXXXX', # ผ่าน
-        'place_of_birth': 'XXXXXXX', # ยังไม่ได้ทำ <<<<
+        'place_of_birth': 'XXXXXXX', # ผ่าน
         'issue_date': 'XXXXXXX', # ผ่าน
         'expiry_date': 'XXXXXXX' # ผ่าน
     }
