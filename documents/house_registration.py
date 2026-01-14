@@ -5,7 +5,7 @@ from ocr.utils import collect_texts, unique_keep_order, to_debug_string
 from re_image.preprocess import resize_image
 from re_image.mask_regions import mask_image_with_regions
 from re_image.crop_regions import crop_regions
-from filter_world.check_documents.check_thai_id import receive_house_registration_ocr_data
+from filter_world.check_documents.check_house_registration import receive_house_registration_ocr_data
 
 REGIONS = {
     "้house_no":   (255, 110, 315, 70, False),
@@ -63,12 +63,12 @@ def process_house_registration_image(image_path: str, output_txt="ocr_result_hou
             f.write(f"{k}: {results.get(k, '')}\n")
 
     results_filter = receive_house_registration_ocr_data(results)
-    output_filter_txt = "results_filter"
+    output_filter_house_registration = "results_filter_house_registration"
 
-    with open(output_filter_txt, "w", encoding="utf-8") as f:
+    with open(output_filter_house_registration, "w", encoding="utf-8") as f:
         json.dump(results_filter, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Done | saved={output_txt} | raw={raw_txt}")
+    print(f"✅ Done | saved={output_txt} | raw={raw_txt} | filter={output_filter_house_registration}")
 
 if __name__ == "__main__":
     process_house_registration_image("image/house_registration/01.png")
