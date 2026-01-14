@@ -21,6 +21,7 @@ def convert_thai_date(text: str, sep: str = "/"):
         return "", False
 
     text = text.strip()
+    text = re.sub(r"[^ก-๙0-9\s]", "", text)
     if not text:
         return "", False
 

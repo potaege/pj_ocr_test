@@ -1,26 +1,21 @@
 import re
 from rapidfuzz import process, fuzz
 
-THAI_PREFIXES = [
-    "นาย", "นาง", "นางสาว",
-    "ด.ช.", "ด.ญ.",
-    "เด็กชาย", "เด็กหญิง",
-    "ว่าที่ร้อยตรี", "ว่าที่ร.ต." ## อาจมีมากกว่านี้
-]
+ENG_PREFIXES = ["MR", "MRS", "MS"]
 
-def name_lastname_th(s: str, prefix_threshold: int = 50):
+def name_lastname_eng(s: str, prefix_threshold: int = 50):
     
     if not isinstance(s, str):
         return "", "", "", False
 
     s = s.strip()
-    s = re.sub(r"[^ก-๙\s\.]", "", s)
+    s = re.sub(r"[^A-Za-z\s\.]", "", s)
 
     if not s:
         return "", "", "", False
 
     # 1) ตรวจคำไทยก่อน (ต้องมีอักษรไทยอย่างน้อย 1 ตัว)
-    if re.search(r"[ก-๙]", s) is None:
+    if re.search(r"[A-Za-z]", s) is None:
         return "", "", "", False
 
     # 2) แยกส่วน
@@ -40,7 +35,7 @@ def name_lastname_th(s: str, prefix_threshold: int = 50):
 
     if n < 4:
         # ใช้ rapidfuzz ตามที่คุณต้องการ
-        match = process.extractOne(candidate, THAI_PREFIXES, scorer=fuzz.ratio)
+        match = process.extractOne(candidate, ENG_PREFIXES, scorer=fuzz.ratio)
         # match = (best_string, score, index) หรือ None
         if match is not None:
             best_prefix, score, _ = match
@@ -61,7 +56,7 @@ def name_lastname_th(s: str, prefix_threshold: int = 50):
     else:
         # n >= 4: ตามเงื่อนไขคุณ ไม่ต้อง fuzz
         # ให้ถือว่า prefix เฉพาะกรณีตรงตัว (กันมั่ว)
-        if candidate in THAI_PREFIXES:
+        if candidate in ENG_PREFIXES:
             prefix = candidate
             remain = parts[1:]
             first_name = remain[0]

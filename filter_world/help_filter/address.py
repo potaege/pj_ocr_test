@@ -56,10 +56,7 @@ def _split_thai_digit_glue(text: str) -> str:
 
 
 def strip_address_word_fuzzy(text: str, threshold: int = 80) -> str:
-    """
-    If the head of text fuzzy-matches "ที่อยู่" >= threshold, remove the first token.
-    (No "after must be digit" check, as requested.)
-    """
+   
     if not isinstance(text, str):
         return ""
 
@@ -78,11 +75,7 @@ def strip_address_word_fuzzy(text: str, threshold: int = 80) -> str:
 
 
 def _clean_token(tok: str) -> str:
-    """
-    Clean token for building address_rest:
-    - drop pure punct tokens
-    - strip punct at ends, keep middle (e.g., 12/3-4 stays)
-    """
+    
     if not tok:
         return ""
     if re.fullmatch(r"[\/\-\.\(\)]+", tok):
