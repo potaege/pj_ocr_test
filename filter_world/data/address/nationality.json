@@ -1,0 +1,542 @@
+{
+  "1": {
+    "nationality": "AFGHAN",
+    "country": "Afghanistan"
+  },
+  "2": {
+    "nationality": "ALBANIAN",
+    "country": "Albania"
+  },
+  "3": {
+    "nationality": "ALGERIAN",
+    "country": "Algeria"
+  },
+  "4": {
+    "nationality": "ANDORRAN",
+    "country": "Andorra"
+  },
+  "5": {
+    "nationality": "ANGOLAN",
+    "country": "Angola"
+  },
+  "6": {
+    "nationality": "ARGENTINE",
+    "country": "Argentina"
+  },
+  "7": {
+    "nationality": "ARMENIAN",
+    "country": "Armenia"
+  },
+  "8": {
+    "nationality": "AUSTRALIAN",
+    "country": "Australia"
+  },
+  "9": {
+    "nationality": "AUSTRIAN",
+    "country": "Austria"
+  },
+  "10": {
+    "nationality": "AZERBAIJANI",
+    "country": "Azerbaijan"
+  },
+  "11": {
+    "nationality": "BAHAMIAN",
+    "country": "Bahamas"
+  },
+  "12": {
+    "nationality": "BAHRAINI",
+    "country": "Bahrain"
+  },
+  "13": {
+    "nationality": "BANGLADESHI",
+    "country": "Bangladesh"
+  },
+  "14": {
+    "nationality": "BARBADIAN",
+    "country": "Barbados"
+  },
+  "15": {
+    "nationality": "BELARUSIAN",
+    "country": "Belarus"
+  },
+  "16": {
+    "nationality": "BELGIAN",
+    "country": "Belgium"
+  },
+  "17": {
+    "nationality": "BELIZEAN",
+    "country": "Belize"
+  },
+  "18": {
+    "nationality": "BENINESE",
+    "country": "Benin"
+  },
+  "19": {
+    "nationality": "BHUTANESE",
+    "country": "Bhutan"
+  },
+  "20": {
+    "nationality": "BOLIVIAN",
+    "country": "Bolivia"
+  },
+  "21": {
+    "nationality": "MOTSWANA",
+    "country": "Botswana"
+  },
+  "22": {
+    "nationality": "BRAZILIAN",
+    "country": "Brazil"
+  },
+  "23": {
+    "nationality": "BRUNEIAN",
+    "country": "Brunei"
+  },
+  "24": {
+    "nationality": "BULGARIAN",
+    "country": "Bulgaria"
+  },
+  "25": {
+    "nationality": "CAMBODIAN",
+    "country": "Cambodia"
+  },
+  "26": {
+    "nationality": "CAMEROONIAN",
+    "country": "Cameroon"
+  },
+  "27": {
+    "nationality": "CANADIAN",
+    "country": "Canada"
+  },
+  "28": {
+    "nationality": "CHILEAN",
+    "country": "Chile"
+  },
+  "29": {
+    "nationality": "CHINESE",
+    "country": "China"
+  },
+  "30": {
+    "nationality": "COLOMBIAN",
+    "country": "Colombia"
+  },
+  "31": {
+    "nationality": "COSTA RICAN",
+    "country": "Costa Rica"
+  },
+  "32": {
+    "nationality": "CROATIAN",
+    "country": "Croatia"
+  },
+  "33": {
+    "nationality": "CUBAN",
+    "country": "Cuba"
+  },
+  "34": {
+    "nationality": "CYPRIOT",
+    "country": "Cyprus"
+  },
+  "35": {
+    "nationality": "CZECH",
+    "country": "Czech Republic"
+  },
+  "36": {
+    "nationality": "DANISH",
+    "country": "Denmark"
+  },
+  "37": {
+    "nationality": "DOMINICAN",
+    "country": "Dominican Republic"
+  },
+  "38": {
+    "nationality": "ECUADORIAN",
+    "country": "Ecuador"
+  },
+  "39": {
+    "nationality": "EGYPTIAN",
+    "country": "Egypt"
+  },
+  "40": {
+    "nationality": "SALVADORAN",
+    "country": "El Salvador"
+  },
+  "41": {
+    "nationality": "ESTONIAN",
+    "country": "Estonia"
+  },
+  "42": {
+    "nationality": "ETHIOPIAN",
+    "country": "Ethiopia"
+  },
+  "43": {
+    "nationality": "FIJIAN",
+    "country": "Fiji"
+  },
+  "44": {
+    "nationality": "FINNISH",
+    "country": "Finland"
+  },
+  "45": {
+    "nationality": "FRENCH",
+    "country": "France"
+  },
+  "46": {
+    "nationality": "GABONESE",
+    "country": "Gabon"
+  },
+  "47": {
+    "nationality": "GAMBIAN",
+    "country": "Gambia"
+  },
+  "48": {
+    "nationality": "GEORGIAN",
+    "country": "Georgia"
+  },
+  "49": {
+    "nationality": "GERMAN",
+    "country": "Germany"
+  },
+  "50": {
+    "nationality": "GHANAIAN",
+    "country": "Ghana"
+  },
+  "51": {
+    "nationality": "GREEK",
+    "country": "Greece"
+  },
+  "52": {
+    "nationality": "GRENADIAN",
+    "country": "Grenada"
+  },
+  "53": {
+    "nationality": "GUATEMALAN",
+    "country": "Guatemala"
+  },
+  "54": {
+    "nationality": "GUINEAN",
+    "country": "Guinea"
+  },
+  "55": {
+    "nationality": "HAITIAN",
+    "country": "Haiti"
+  },
+  "56": {
+    "nationality": "HONDURAN",
+    "country": "Honduras"
+  },
+  "57": {
+    "nationality": "HUNGARIAN",
+    "country": "Hungary"
+  },
+  "58": {
+    "nationality": "ICELANDIC",
+    "country": "Iceland"
+  },
+  "59": {
+    "nationality": "INDIAN",
+    "country": "India"
+  },
+  "60": {
+    "nationality": "INDONESIAN",
+    "country": "Indonesia"
+  },
+  "61": {
+    "nationality": "IRANIAN",
+    "country": "Iran"
+  },
+  "62": {
+    "nationality": "IRAQI",
+    "country": "Iraq"
+  },
+  "63": {
+    "nationality": "IRISH",
+    "country": "Ireland"
+  },
+  "64": {
+    "nationality": "ISRAELI",
+    "country": "Israel"
+  },
+  "65": {
+    "nationality": "ITALIAN",
+    "country": "Italy"
+  },
+  "66": {
+    "nationality": "JAPANESE",
+    "country": "Japan"
+  },
+  "67": {
+    "nationality": "KENYAN",
+    "country": "Kenya"
+  },
+  "68": {
+    "nationality": "KOREAN",
+    "country": "Korea, South"
+  },
+  "69": {
+    "nationality": "KUWAITI",
+    "country": "Kuwait"
+  },
+  "70": {
+    "nationality": "LAO",
+    "country": "Laos"
+  },
+  "71": {
+    "nationality": "LATVIAN",
+    "country": "Latvia"
+  },
+  "72": {
+    "nationality": "LEBANESE",
+    "country": "Lebanon"
+  },
+  "73": {
+    "nationality": "LIBERIAN",
+    "country": "Liberia"
+  },
+  "74": {
+    "nationality": "LIBYAN",
+    "country": "Libya"
+  },
+  "75": {
+    "nationality": "LITHUANIAN",
+    "country": "Lithuania"
+  },
+  "76": {
+    "nationality": "LUXEMBOURGISH",
+    "country": "Luxembourg"
+  },
+  "77": {
+    "nationality": "MALAYSIAN",
+    "country": "Malaysia"
+  },
+  "78": {
+    "nationality": "MALDIVIAN",
+    "country": "Maldives"
+  },
+  "79": {
+    "nationality": "MALIAN",
+    "country": "Mali"
+  },
+  "80": {
+    "nationality": "MALTESE",
+    "country": "Malta"
+  },
+  "81": {
+    "nationality": "MEXICAN",
+    "country": "Mexico"
+  },
+  "82": {
+    "nationality": "MOLDOVAN",
+    "country": "Moldova"
+  },
+  "83": {
+    "nationality": "MONEGASQUE",
+    "country": "Monaco"
+  },
+  "84": {
+    "nationality": "MONGOLIAN",
+    "country": "Mongolia"
+  },
+  "85": {
+    "nationality": "MONTENEGRIN",
+    "country": "Montenegro"
+  },
+  "86": {
+    "nationality": "MOROCCAN",
+    "country": "Morocco"
+  },
+  "87": {
+    "nationality": "MOZAMBICAN",
+    "country": "Mozambique"
+  },
+  "88": {
+    "nationality": "BURMESE",
+    "country": "Myanmar"
+  },
+  "89": {
+    "nationality": "NEPALESE",
+    "country": "Nepal"
+  },
+  "90": {
+    "nationality": "DUTCH",
+    "country": "Netherlands"
+  },
+  "91": {
+    "nationality": "NEW ZEALANDER",
+    "country": "New Zealand"
+  },
+  "92": {
+    "nationality": "NICARAGUAN",
+    "country": "Nicaragua"
+  },
+  "93": {
+    "nationality": "NIGERIAN",
+    "country": "Nigeria"
+  },
+  "94": {
+    "nationality": "MACEDONIAN",
+    "country": "North Macedonia"
+  },
+  "95": {
+    "nationality": "NORWEGIAN",
+    "country": "Norway"
+  },
+  "96": {
+    "nationality": "OMANI",
+    "country": "Oman"
+  },
+  "97": {
+    "nationality": "PAKISTANI",
+    "country": "Pakistan"
+  },
+  "98": {
+    "nationality": "PANAMANIAN",
+    "country": "Panama"
+  },
+  "99": {
+    "nationality": "PARAGUAYAN",
+    "country": "Paraguay"
+  },
+  "100": {
+    "nationality": "PERUVIAN",
+    "country": "Peru"
+  },
+  "101": {
+    "nationality": "FILIPINO",
+    "country": "Philippines"
+  },
+  "102": {
+    "nationality": "POLISH",
+    "country": "Poland"
+  },
+  "103": {
+    "nationality": "PORTUGUESE",
+    "country": "Portugal"
+  },
+  "104": {
+    "nationality": "QATARI",
+    "country": "Qatar"
+  },
+  "105": {
+    "nationality": "ROMANIAN",
+    "country": "Romania"
+  },
+  "106": {
+    "nationality": "RUSSIAN",
+    "country": "Russia"
+  },
+  "107": {
+    "nationality": "SAUDI ARABIAN",
+    "country": "Saudi Arabia"
+  },
+  "108": {
+    "nationality": "SENEGALESE",
+    "country": "Senegal"
+  },
+  "109": {
+    "nationality": "SINGAPOREAN",
+    "country": "Singapore"
+  },
+  "110": {
+    "nationality": "SLOVAK",
+    "country": "Slovakia"
+  },
+  "111": {
+    "nationality": "SLOVENIAN",
+    "country": "Slovenia"
+  },
+  "112": {
+    "nationality": "SOUTH AFRICAN",
+    "country": "South Africa"
+  },
+  "113": {
+    "nationality": "SPANISH",
+    "country": "Spain"
+  },
+  "114": {
+    "nationality": "SRI LANKAN",
+    "country": "Sri Lanka"
+  },
+  "115": {
+    "nationality": "SWEDISH",
+    "country": "Sweden"
+  },
+  "116": {
+    "nationality": "SWISS",
+    "country": "Switzerland"
+  },
+  "117": {
+    "nationality": "SYRIAN",
+    "country": "Syria"
+  },
+  "118": {
+    "nationality": "TAIWANESE",
+    "country": "Taiwan"
+  },
+  "119": {
+    "nationality": "TANZANIAN",
+    "country": "Tanzania"
+  },
+  "120": {
+    "nationality": "THAI",
+    "country": "Thailand"
+  },
+  "121": {
+    "nationality": "TOGOLESE",
+    "country": "Togo"
+  },
+  "122": {
+    "nationality": "TRINIDADIAN",
+    "country": "Trinidad and Tobago"
+  },
+  "123": {
+    "nationality": "TUNISIAN",
+    "country": "Tunisia"
+  },
+  "124": {
+    "nationality": "TURKISH",
+    "country": "Turkey"
+  },
+  "125": {
+    "nationality": "UGANDAN",
+    "country": "Uganda"
+  },
+  "126": {
+    "nationality": "UKRAINIAN",
+    "country": "Ukraine"
+  },
+  "127": {
+    "nationality": "EMIRATI",
+    "country": "United Arab Emirates"
+  },
+  "128": {
+    "nationality": "BRITISH",
+    "country": "United Kingdom"
+  },
+  "129": {
+    "nationality": "AMERICAN",
+    "country": "United States"
+  },
+  "130": {
+    "nationality": "URUGUAYAN",
+    "country": "Uruguay"
+  },
+  "131": {
+    "nationality": "VENEZUELAN",
+    "country": "Venezuela"
+  },
+  "132": {
+    "nationality": "VIETNAMESE",
+    "country": "Vietnam"
+  },
+  "133": {
+    "nationality": "YEMENI",
+    "country": "Yemen"
+  },
+  "134": {
+    "nationality": "ZAMBIAN",
+    "country": "Zambia"
+  },
+  "135": {
+    "nationality": "ZIMBABWEAN",
+    "country": "Zimbabwe"
+  }
+}

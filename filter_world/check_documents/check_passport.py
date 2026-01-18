@@ -28,7 +28,7 @@ def receive_passport_ocr_data(ocr_data: dict):
     value_passport_no, valid_passport_no = check_passport_no(result.get("passport_no", ""))
     last_name_en,valid_last_name_en = keep_english_words(result.get("last_name_en", ""))
     prefix_name_en,first_name_en,valid_first_name_en = split_name_eng(result.get("first_name_en", ""))
-    # prefix_name_th,name_th,last_name_th,valid_name_last_name_th = name_lastname_th(result.get("name_lastname_th", ""))
+    prefix_name_th,name_th,last_name_th,valid_name_last_name_th = name_lastname_th(result.get("full_name_th", ""))
     nationality, valid_nationality = check_nationality(result.get("nationality", ""))
     date_of_birth, valid_date_of_birth = convert_english_date(result.get("date_of_birth", ""))
     sex, valid_sex = check_sex(result.get("sex", ""))
@@ -54,10 +54,10 @@ def receive_passport_ocr_data(ocr_data: dict):
     output_result['first_name_en'] = first_name_en
     output_result['valid_first_name_en'] = valid_first_name_en
 
-    # output_result['prefix_name_th'] = prefix_name_th
-    # output_result['name_th'] = name_th
-    # output_result['last_name_th'] = last_name_th
-    # output_result['valid_name_last_name_th'] = valid_name_last_name_th
+    output_result['prefix_name_th'] = prefix_name_th
+    output_result['name_th'] = name_th
+    output_result['last_name_th'] = last_name_th
+    output_result['valid_name_last_name_th'] = valid_name_last_name_th
 
     output_result['nationality'] = nationality
     output_result['valid_nationality'] = valid_nationality
@@ -92,8 +92,8 @@ def main():
         'type': 'XXXXXXX', # ผ่าน
         'last_name_en': 'XXXXXXX', # ผ่าน
         'first_name_en': 'XXXXXXX', # ผ่าน
-        'full_name_th': 'XXXXXXX', # ยังไม่ได้ทำ <<<<
-        'nationality': 'XXXXXXX', # ผ่าน
+        'full_name_th': 'XXXXXXX', # ผ่าน
+        'nationality': 'XXXXXXX', # ผ่าน แต่ All_nationality ต้องแยกใส่ใน Json
         'date_of_birth': 'XXXXXXX', # ผ่าน
         'sex': 'XXXXXXX', # ผ่าน
         'height': 'XXXXXXX', # ผ่าน
