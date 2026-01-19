@@ -16,10 +16,20 @@ def load_thai_admin_data():
 
     return provinces, districts, sub_districts
 
-
-
 def load_provinces():
     with open(DATA_DIR / "provinces.json", encoding="utf-8") as f:
         provinces = json.load(f)
     
     return provinces
+
+def load_registration_offices():
+    with open(DATA_DIR / "registration_offices.json", encoding="utf-8") as f:
+        registration_offices = json.load(f)
+    
+    return registration_offices
+
+def load_nationalities():
+    with open(DATA_DIR / "nationalities.json", encoding="utf-8") as f:
+        nationalities = json.load(f)
+    
+    return nationalities

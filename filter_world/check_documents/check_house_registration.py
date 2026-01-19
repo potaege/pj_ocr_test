@@ -1,12 +1,12 @@
 from filter_world.help_filter.common import remove_prefix
-from filter_world.help_filter.check_number_length import check_number_length
-from filter_world.help_filter.name_lastName_th import name_lastname_th
-from filter_world.help_filter.english_only import keep_english_words
+from filter_world.help_filter.house_no import check_house_no
+from filter_world.help_filter.registry_office import check_registry_office
 from filter_world.help_filter.thai_date import convert_thai_date
-from filter_world.help_filter.religion_th import normalize_religion_th
 from filter_world.help_filter.address import parse_admin_from_address
 from filter_world.data.address.loader_address import load_thai_admin_data
 PROVINCES, DISTRICTS, SUB_DISTRICTS = load_thai_admin_data()
+from filter_world.data.address.loader_address import load_registration_offices
+REGISTRATION_OFFICES = load_registration_offices()
 
 def receive_house_registration_ocr_data(ocr_data: dict):
 
@@ -17,8 +17,8 @@ def receive_house_registration_ocr_data(ocr_data: dict):
     for k, v in result.items():
         result[k] = remove_prefix(v)
 
-    value_house_no, valid_house_no = check_number_length(result.get("house_no", ""),11)
-    # registry_office, valid_registry_office = name_lastname_th(result.get("registry_office", ""))
+    value_house_no, valid_house_no = check_house_no(result.get("house_no", ""))
+    registry_office, valid_registry_office = check_registry_office(result.get("registry_office", ""), REGISTRATION_OFFICES)
     addr_rest, sub_th, dist_th, prov_th, addr_ok = parse_admin_from_address(
         result.get("address", ""),
         PROVINCES,
@@ -35,8 +35,8 @@ def receive_house_registration_ocr_data(ocr_data: dict):
     output_result["house_no"] = value_house_no 
     output_result["house_no_valid"] = valid_house_no
 
-    # output_result['registry_office'] = registry_office
-    # output_result['registry_office_valid'] = valid_registry_office
+    output_result['registry_office'] = registry_office
+    output_result['registry_office_valid'] = valid_registry_office
 
     output_result["address_rest"] = addr_rest
     output_result["sub_district_th"] = sub_th
@@ -69,7 +69,7 @@ def receive_house_registration_ocr_data(ocr_data: dict):
 def main():
     
     ls = {
-        "้house_no": 'XXXXXXX',
+        "house_no": 'XXXXXXX',
         "registry_office": 'XXXXXXX',
         "address": 'XXXXXXX',
         "village_name": 'XXXXXXX',
@@ -79,6 +79,7 @@ def main():
         "date_of_registration": 'XXXXXXX',
         "date_of_print_house_registration": 'XXXXXXX'
         }
+    
     a = receive_house_registration_ocr_data(ls)
     print(a)
     

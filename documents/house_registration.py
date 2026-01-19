@@ -8,7 +8,7 @@ from re_image.crop_regions import crop_regions
 from filter_world.check_documents.check_house_registration import receive_house_registration_ocr_data
 
 REGIONS = {
-    "้house_no":   (255, 110, 315, 70, False),
+    "house_no":   (255, 110, 315, 70, False),
     "registry_office":  (785, 110, 390, 70, False),
     "address":          (165, 180, 870, 130, True), # address มีแล้ว
     "village_name":  (165, 330, 420, 70, False),
