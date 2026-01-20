@@ -1,6 +1,8 @@
 from filter_world.help_filter.common import remove_prefix
 from filter_world.help_filter.house_no import check_house_no
 from filter_world.help_filter.registry_office import check_registry_office
+from filter_world.help_filter.house_type import check_house_type
+from filter_world.help_filter.house_specification import check_house_specification
 from filter_world.help_filter.thai_date import convert_thai_date
 from filter_world.help_filter.address import parse_admin_from_address
 from filter_world.data.address.loader_address import load_thai_admin_data
@@ -27,8 +29,8 @@ def receive_house_registration_ocr_data(ocr_data: dict):
     )
     # village_name, valid_village_name = keep_english_words(result.get("village_name", ""))
     # house_name, valid_house_name = keep_english_words(result.get("house_name", ""))
-    # house_type , valid_house_type = convert_thai_date(result.get("house_type", ""))
-    # house_specification, valid_house_specification = normalize_religion_th(result.get("house_specification", ""))
+    house_type , valid_house_type = check_house_type(result.get("house_type", ""))
+    house_specification, valid_house_specification = check_house_specification(result.get("house_specification", ""))
     date_of_registration, valid_date_of_registration = convert_thai_date(result.get("date_of_registration", ""))
     date_of_print_house_registration, valid_date_of_print_house_registration = convert_thai_date(result.get("date_of_print_house_registration", ""))
 
@@ -50,11 +52,11 @@ def receive_house_registration_ocr_data(ocr_data: dict):
     # output_result['house_name'] = house_name
     # output_result['valid_house_name'] = valid_house_name
     
-    # output_result['house_type'] = house_type
-    # output_result['valid_house_type'] = valid_house_type
+    output_result['house_type'] = house_type
+    output_result['valid_house_type'] = valid_house_type
 
-    # output_result['house_specification'] = house_specification
-    # output_result['valid_house_specification'] = valid_house_specification
+    output_result['house_specification'] = house_specification
+    output_result['valid_house_specification'] = valid_house_specification
 
     output_result['date_of_registration'] = date_of_registration
     output_result['valid_date_of_registration'] = valid_date_of_registration

@@ -30,6 +30,7 @@ def check_registry_office(input_text: str, office_data: dict, threshold: int = 3
     compare_choices = []
     short_to_full_map = {}
     
+    # วนลูปดึงข้อมูลจาก Dict ที่รับเข้ามา
     for key, info in office_data.items():
         full_name = str(info.get("offices", "")).strip()
         
@@ -42,6 +43,7 @@ def check_registry_office(input_text: str, office_data: dict, threshold: int = 3
 
     best_match_short, score = _best_match(clean_input, compare_choices)
 
+    # ตรวจสอบคะแนนและคืนค่า
     if best_match_short and score >= threshold:
         full_correct_name = short_to_full_map.get(best_match_short, best_match_short)
         full_correct_name = full_correct_name.replace("สำนักทะเบียน", "").strip()
