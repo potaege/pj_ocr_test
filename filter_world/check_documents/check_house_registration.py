@@ -1,6 +1,8 @@
 from filter_world.help_filter.common import remove_prefix
 from filter_world.help_filter.house_no import check_house_no
 from filter_world.help_filter.registry_office import check_registry_office
+from filter_world.help_filter.village_name import check_village_name
+from filter_world.help_filter.house_name import check_house_name
 from filter_world.help_filter.house_type import check_house_type
 from filter_world.help_filter.house_specification import check_house_specification
 from filter_world.help_filter.thai_date import convert_thai_date
@@ -27,8 +29,8 @@ def receive_house_registration_ocr_data(ocr_data: dict):
         DISTRICTS,
         SUB_DISTRICTS
     )
-    # village_name, valid_village_name = keep_english_words(result.get("village_name", ""))
-    # house_name, valid_house_name = keep_english_words(result.get("house_name", ""))
+    village_name, valid_village_name, village_status = check_village_name(result.get("village_name", ""))
+    house_name, valid_house_name, house_name_status = check_house_name(result.get("house_name", ""))
     house_type , valid_house_type = check_house_type(result.get("house_type", ""))
     house_specification, valid_house_specification = check_house_specification(result.get("house_specification", ""))
     date_of_registration, valid_date_of_registration = convert_thai_date(result.get("date_of_registration", ""))
@@ -46,11 +48,13 @@ def receive_house_registration_ocr_data(ocr_data: dict):
     output_result["province_th"] = prov_th
     output_result["address_valid"] = addr_ok
 
-    # output_result['village_name'] = village_name
-    # output_result['valid_village_name'] = valid_village_name
+    output_result['village_name'] = village_name
+    output_result['valid_village_name'] = valid_village_name
+    output_result['village_name_status'] = village_status
 
-    # output_result['house_name'] = house_name
-    # output_result['valid_house_name'] = valid_house_name
+    output_result['house_name'] = house_name
+    output_result['valid_house_name'] = valid_house_name
+    output_result['house_name_status'] = house_name_status
     
     output_result['house_type'] = house_type
     output_result['valid_house_type'] = valid_house_type
