@@ -1,4 +1,5 @@
 import re
+from rapidfuzz import process, fuzz
 
 ENGLISH_MONTHS = {
     "Jan": "01", "January": "01",
@@ -42,10 +43,24 @@ def convert_english_date(text: str, sep: str = "/"):
 
     # เดือน (แปลงตัวแรกเป็นพิมพ์ใหญ่ ที่เหลือพิมพ์เล็ก เพื่อให้ตรงกับ Key ใน Dict)
     # เช่น "january" -> "January", "JAN" -> "Jan"
-    month = ENGLISH_MONTHS.get(month_eng.title()) 
+    month_norm = re.sub(r"[^A-Za-z]", "", month_eng)
+    month = ENGLISH_MONTHS.get(month_norm.title()) 
     
     if not month:
-        return "", False
+        choices = list(ENGLISH_MONTHS.keys())
+        best = process.extractOne(
+            month_norm,
+            choices,
+            scorer=fuzz.WRatio
+        )
+        if not best:
+            return "", False
+
+        best_key, score, _ = best
+        if score < 50:  
+            return "", False
+
+        month = ENGLISH_MONTHS[best_key]
 
     # ปี
     if not year.isdigit():

@@ -1,4 +1,5 @@
 import re
+from rapidfuzz import process, fuzz
 
 THAI_MONTHS = {
     "ม.ค.": "01", "มกราคม": "01",
@@ -42,9 +43,25 @@ def convert_thai_date(text: str, sep: str = "/"):
     day = day.zfill(2)
 
     # เดือน
-    month = THAI_MONTHS.get(month_th)
+    month_norm = re.sub(r"[^ก-๙\.]", "", month_th).strip()
+
+    month = THAI_MONTHS.get(month_norm)
     if not month:
-        return "", False
+        choices = list(THAI_MONTHS.keys())
+        best = process.extractOne(
+            month_norm,
+            choices,
+            scorer=fuzz.WRatio
+        )
+        if not best:
+            return "", False
+
+        best_key, score, _ = best
+        if score < 50:  
+            return "", False
+
+        month = THAI_MONTHS[best_key]
+
 
     # ปี
     if not year.isdigit():

@@ -5,6 +5,7 @@ from ocr.utils import collect_texts, unique_keep_order, to_debug_string
 from re_image.preprocess import resize_image
 from re_image.crop_regions import crop_regions 
 from filter_world.check_documents.check_thai_id import receive_thai_id_ocr_data
+from test.test_output import evaluate_ocr_result
 
 REGIONS = {
     "citizen_id": (554, 82, 421, 54 ,False), ##พิกัดcrop 4ตัวหน้า แล้วตัวท้ายสุดคือ ต้องการให้ ภาพที่มีพื้นหลังสีอื่นทำให้กลายเป็นสีขาวไหม
@@ -17,6 +18,48 @@ REGIONS = {
     "issue_date": (137, 632, 190, 38,True),
     "expiry_date": (700, 623, 192, 45,True),
 }
+
+ranks = {
+    "citizen_id": 1,
+
+    "prefix_name_th": 2,
+    "last_name_th": 2,
+    "prefix_name_eng": 2,
+    "last_name_eng": 2,
+    "province_th": 2,
+    "issue_date": 2,
+    "expiry_date": 2,
+
+    "name_th": 3,
+    "name_eng": 3,
+    "birthday": 3,
+    "district_th": 3,
+
+    "sub_district_th": 4,
+
+    "address_rest": 5,
+
+    "religion": 6
+}
+
+disct = {
+  "citizen_id": "", 
+  "prefix_name_th": "นาย",   
+  "name_th": "",  
+  "last_name_th": "", 
+  "prefix_name_eng": "Mr", 
+  "name_eng": "",  
+  "last_name_eng": "", 
+  "birthday": "22/03/2547", 
+  "religion": "พุทธ", 
+  "address_rest": "", ## ที่อยู่ที่ คำที่มาก่อน พวก เขต แขวง จังหวัด 
+  "sub_district_th": "รามอินทรา", 
+  "district_th": "คันนายาว", 
+  "province_th": "กรุงเทพมหานคร", 
+  "issue_date": "07/04/2562", 
+  "expiry_date": "21/03/2571" 
+}
+
 
 def process_thai_id_image(image_path: str, output_txt="ocr_result.txt", raw_txt="ocr_raw.txt"):
     img = cv2.imread(image_path)
@@ -72,6 +115,11 @@ def process_thai_id_image(image_path: str, output_txt="ocr_result.txt", raw_txt=
 
     print(f"✅ Done | saved={output_txt} | raw={raw_txt} | filter={output_filter_txt}")
 
+    check_thai_id = evaluate_ocr_result(results_filter,disct,ranks)
+
+    with open("ocr_result.json", "w", encoding="utf-8") as f:
+        json.dump(check_thai_id, f, ensure_ascii=False, indent=2)
+
 
 if __name__ == "__main__":
-    process_thai_id_image("image/car_id.jpg")
+    process_thai_id_image("image/thai_id/real_main_id.jpg")

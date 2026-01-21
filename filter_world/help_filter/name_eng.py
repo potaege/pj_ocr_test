@@ -1,8 +1,8 @@
 import re
 
 ENG_PREFIXES = [
-    "Mr.", "Mrs.", "Ms.", "Miss", "Dr.", "Prof.",
-    "MR.", "MRS.", "MS.", "MISS", "DR.", "PROF."
+    "Mr", "Mrs", "Ms", "Miss",
+    "MR", "MRS", "MS", "MISS"
 ]
 
 def split_name_eng(s: str):
@@ -14,7 +14,7 @@ def split_name_eng(s: str):
     if not s:
         return "", "", False
 
-    s = re.sub(r"[^A-Za-z\.\s]", " ", s)
+    s = re.sub(r"[^A-Za-z\s]", " ", s)
 
     # normalize space
     s = re.sub(r"\s+", " ", s).strip()
