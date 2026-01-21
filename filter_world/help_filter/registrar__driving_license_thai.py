@@ -6,7 +6,7 @@ def find_province_from_registrar(registrar_text: str, provinces: dict, threshold
     s = re.sub(r"[^ก-๙A-Za-z0-9\s]", "", registrar_text)
     s = re.sub(r"\s+", " ", s).strip()
     if not s:
-        return None, 0, [], False
+        return None , None, 0, [], False
 
     
     nums = re.findall(r"\d+", s)
@@ -43,7 +43,17 @@ def find_province_from_registrar(registrar_text: str, provinces: dict, threshold
             best = (name, score, "en")
 
     if best is None or best[1] < threshold:
-        return None, best[1] if best else 0,  nums, False
+        return None ,None , best[1] if best else 0,  nums, False
 
+    if best[2] == "th":
+        idx = th_choices.index(name)
 
-    return name, score, nums, True
+        outpue_name_th = name
+        output_name_eng = en_choices[idx]
+    else:
+        idx = en_choices.index(name)
+
+        outpue_name_th = th_choices[idx]
+        output_name_eng = name
+
+    return outpue_name_th, output_name_eng , score, nums, True

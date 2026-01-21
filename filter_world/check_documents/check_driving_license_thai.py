@@ -30,7 +30,7 @@ def receive_driving_license_thai_data(ocr_data: dict):
     birth_date_th , valid_birth_date_th = convert_thai_date(result.get("birth_date_th",""))
     birth_date_eng , valid_birth_date_eng = convert_english_date(result.get("birth_date_eng",""))
     thai_id, valid_thai_id = check_number_length(result.get("thai_id", ""),13)
-    provinces , score_registrar ,nums_list , valid_registrar = find_province_from_registrar(result.get("registrar", ""),PROVINCES)
+    provinces_th ,provinces_eng, score_registrar ,nums_list , valid_registrar = find_province_from_registrar(result.get("registrar", ""),PROVINCES)
 
     output_result["car_type"] = car_type
 
@@ -71,7 +71,8 @@ def receive_driving_license_thai_data(ocr_data: dict):
     output_result["thai_id"] = thai_id 
     output_result["valid_thi_id"] = valid_thai_id
 
-    output_result["provinces"] = provinces
+    output_result["provinces_th"] = provinces_th
+    output_result["provinces_eng"] = provinces_eng
     output_result["score_registrar"] = score_registrar
     output_result["nums_list"] = nums_list
     output_result["valid_registrar"] = valid_registrar

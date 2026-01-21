@@ -9,12 +9,12 @@ def name_lastname_eng(s: str, prefix_threshold: int = 50):
         return "", "", "", False
 
     s = s.strip()
-    s = re.sub(r"[^A-Za-z\s\]", "", s)
+    s = re.sub(r"[^A-Za-z\s]", "", s)
 
     if not s:
         return "", "", "", False
 
-    # 1) ตรวจคำไทยก่อน (ต้องมีอักษรไทยอย่างน้อย 1 ตัว)
+ 
     if re.search(r"[A-Za-z]", s) is None:
         return "", "", "", False
 
