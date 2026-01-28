@@ -16,6 +16,7 @@ REGIONS = {
     "full_name_th":  (415, 257, 435, 36, True),
     "nationality":   (415, 318, 140, 26, True),
     "date_of_birth": (595, 317, 190, 24, True),
+    "identification_no": (815, 317, 220, 26, True),
     "sex":           (415, 367, 110, 28, True),
     "height":        (415, 422, 110, 28, True),
     "place_of_birth":(595, 368, 400, 26, True),
@@ -43,7 +44,7 @@ def process_passport_image(image_path: str, output_txt="ocr_result_passport.txt"
             results[field] = ""
             continue
 
-        is_addr = (field == "full_name_th") 
+        is_addr = (field == "full_name_th")
         res, used_api = run_ocr(crop , no_doc=is_addr, no_textline=is_addr)
 
         # เก็บ raw debug แยกตาม field

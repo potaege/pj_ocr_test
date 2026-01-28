@@ -4,6 +4,7 @@ from filter_world.help_filter.type import check_passport_type
 from filter_world.help_filter.country_code import check_country_code
 from filter_world.help_filter.passport_no import check_passport_no
 from filter_world.help_filter.nationality import check_nationality
+from filter_world.help_filter.check_number_length import check_number_length
 from filter_world.help_filter.sex import check_sex
 from filter_world.help_filter.height import check_height
 from filter_world.help_filter.name_lastName_th import name_lastname_th
@@ -31,6 +32,7 @@ def receive_passport_ocr_data(ocr_data: dict):
     prefix_name_th,name_th,last_name_th,valid_name_last_name_th = name_lastname_th(result.get("full_name_th", ""))
     nationality, valid_nationality = check_nationality(result.get("nationality", ""))
     date_of_birth, valid_date_of_birth = convert_english_date(result.get("date_of_birth", ""))
+    identification_no, valid_identification_no = check_number_length(result.get("identification_no", ""), 13)
     sex, valid_sex = check_sex(result.get("sex", ""))
     height, valid_height = check_height(result.get("height", ""))
     place_of_birth, valid_place_of_birth = parse_province_en(result.get("place_of_birth", ""), PROVINCES)
@@ -61,6 +63,9 @@ def receive_passport_ocr_data(ocr_data: dict):
 
     output_result['nationality'] = nationality
     output_result['valid_nationality'] = valid_nationality
+
+    output_result['identification_no'] = identification_no
+    output_result['valid_identification_no'] = valid_identification_no
 
     output_result['date_of_birth'] = date_of_birth
     output_result['valid_date_of_birth'] = valid_date_of_birth
