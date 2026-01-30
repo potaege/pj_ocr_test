@@ -10,8 +10,8 @@ from test.test_output import evaluate_ocr_result
 REGIONS = {
     "citizen_id": (554, 82, 421, 54 ,False), ##พิกัดcrop 4ตัวหน้า แล้วตัวท้ายสุดคือ ต้องการให้ ภาพที่มีพื้นหลังสีอื่นทำให้กลายเป็นสีขาวไหม
     "name_lastname_th": (355 ,149, 889, 93,True),
-    "name_eng": (495, 240, 554, 54,True),
-    "lastname_eng": (561, 293, 519, 47,True),
+    "name_eng": (498, 251, 558, 54,True),
+    "lastname_eng": (568, 293, 519, 47,True),
     "birthday": (550, 340, 279, 66,True),
     "religion": (529, 470, 122, 47,True),
     "address": (135, 511, 763, 121,True),
