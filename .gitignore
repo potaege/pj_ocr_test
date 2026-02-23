@@ -9,10 +9,13 @@ ocr_result.txt
 results_filter
 results_filter_passport
 results_filter_house_registration
+results_filter_born_certification
 ocr_result_house_registration.txt
 ocr_result_passport.txt
+ocr_result_born_certification.txt
 ocr_raw_house_registration.txt
 ocr_raw_passport.txt
+ocr_raw_born_certification.txt
 *jpg
 *png
 results_filter_test
