@@ -119,34 +119,30 @@ def driving_license_thai(image_path: str, output_txt="ocr_result.txt", raw_txt="
 
     print(f"✅ Done | saved={output_txt} | raw={raw_txt} | filter={output_filter_txt}")
 
-    check_driving_license_thai = evaluate_ocr_result(results_filter,disct,ranks)
-
-    with open("ocr_result.json", "w", encoding="utf-8") as f:
-        json.dump(check_driving_license_thai, f, ensure_ascii=False, indent=2)
 
 
 def  format_after_filter(data):
 
     result = {
-        "car_type": data["car_type"],
-        "car_id": data["car_id_2"],
+        "driving_licence_type": data["car_type"],##
+        "driving_licence_id": data["car_id_2"],##
 
-        "issue_date": data["issue_date_eng"],
-        "expiry_date": data["expiry_date_eng"],
+        "issue_date": data["issue_date_eng"], ##
+        "expiry_date": data["expiry_date_eng"], ##
 
-        "prefix_name_th": data["prefix_name_th"],
-        "name_th": data["name_th"],
-        "last_name_th": data["last_name_th"],
+        "prefix_name_th": data["prefix_name_th"],##
+        "name_th": data["name_th"],##
+        "last_name_th": data["last_name_th"], ## 
 
-        "prefix_name_eng": data["prefix_name_eng"],
-        "name_eng": data["name_eng"],
-        "last_name_eng": data["last_name_eng"],
+        "prefix_name_eng": data["prefix_name_eng"],##
+        "name_eng": data["name_eng"], ## 
+        "last_name_eng": data["last_name_eng"],##
 
-        "birth_date": data["birth_date_eng"],
+        "birth_date": data["birth_date_eng"], ##
 
-        "thai_id": data["thai_id"],
+        "citizen_id": data["thai_id"], ##
 
-        "provinces_th": data["provinces_th"],
+        "provinces_th": data["provinces_th"], ##
         "provinces_eng": data["provinces_eng"],
         "registrar_index": data["nums_list"][0],
 
