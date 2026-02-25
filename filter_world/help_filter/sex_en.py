@@ -1,4 +1,4 @@
-def check_sex(text: str):
+def check_sex_en(text: str):
     if not isinstance(text, str):
         return "", False
 

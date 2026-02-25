@@ -136,7 +136,7 @@ ALL_COUNTRY_NATIONALITY = {
     "ZIMBABWEAN": "Zimbabwe"
 }
 
-def check_nationality(text: str):
+def check_nationality_en(text: str):
     if not isinstance(text, str):
         return "", False
 

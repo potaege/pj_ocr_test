@@ -13,6 +13,7 @@ def name_lastname_th(s: str, prefix_threshold: int = 50):
     if not isinstance(s, str):
         return "", "", "", False
 
+    s = re.sub(r"^(ชื่อตัว\s*\-?\s*ชื่อสกุลก่อน[ก-๙]*สมรส|ชื่อตัว\s*\-?\s*ชื่อสกุล|ชื่อ\-?นามสกุล|ชื่อ\-?สกุล|นามสกุล|ชื่อ)\s*", "", s)
     s = s.strip()
     s = re.sub(r"[^ก-๙\s\.]", "", s)
 
