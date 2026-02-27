@@ -33,3 +33,9 @@ def load_nationalities():
         nationalities = json.load(f)
     
     return nationalities
+
+def load_countries():
+    with open(DATA_DIR / "countries.json", encoding="utf-8") as f:
+        countries = json.load(f)
+    
+    return countries

@@ -1,0 +1,998 @@
+{
+  "4": {
+    "name_th": "อัฟกานิสถาน",
+    "name_en": "Afghanistan"
+  },
+  "8": {
+    "name_th": "แอลเบเนีย",
+    "name_en": "Albania"
+  },
+  "10": {
+    "name_th": "แอนตาร์กติกา",
+    "name_en": "Antarctica"
+  },
+  "12": {
+    "name_th": "แอลจีเรีย",
+    "name_en": "Algeria"
+  },
+  "16": {
+    "name_th": "อเมริกันซามัว",
+    "name_en": "American Samoa"
+  },
+  "20": {
+    "name_th": "อันดอร์รา",
+    "name_en": "Andorra"
+  },
+  "24": {
+    "name_th": "แองโกลา",
+    "name_en": "Angola"
+  },
+  "28": {
+    "name_th": "แอนติกาและบาร์บูดา",
+    "name_en": "Antigua and Barbuda"
+  },
+  "31": {
+    "name_th": "อาเซอร์ไบจาน",
+    "name_en": "Azerbaijan"
+  },
+  "32": {
+    "name_th": "อาร์เจนตินา",
+    "name_en": "Argentina"
+  },
+  "36": {
+    "name_th": "ออสเตรเลีย",
+    "name_en": "Australia"
+  },
+  "40": {
+    "name_th": "ออสเตรีย",
+    "name_en": "Austria"
+  },
+  "44": {
+    "name_th": "บาฮามาส",
+    "name_en": "Bahamas"
+  },
+  "48": {
+    "name_th": "บาห์เรน",
+    "name_en": "Bahrain"
+  },
+  "50": {
+    "name_th": "บังกลาเทศ",
+    "name_en": "Bangladesh"
+  },
+  "51": {
+    "name_th": "อาร์มีเนีย",
+    "name_en": "Armenia"
+  },
+  "52": {
+    "name_th": "บาร์เบโดส",
+    "name_en": "Barbados"
+  },
+  "56": {
+    "name_th": "เบลเยียม",
+    "name_en": "Belgium"
+  },
+  "60": {
+    "name_th": "เบอร์มิวดา",
+    "name_en": "Bermuda"
+  },
+  "64": {
+    "name_th": "ภูฏาน",
+    "name_en": "Bhutan"
+  },
+  "68": {
+    "name_th": "โบลิเวีย",
+    "name_en": "Bolivia"
+  },
+  "70": {
+    "name_th": "บอสเนียและเฮอร์เซโกวีนา",
+    "name_en": "Bosnia and Herzegovina"
+  },
+  "72": {
+    "name_th": "บอตสวานา",
+    "name_en": "Botswana"
+  },
+  "74": {
+    "name_th": "เกาะบูเวต์",
+    "name_en": "Bouvet Island"
+  },
+  "76": {
+    "name_th": "บราซิล",
+    "name_en": "Brazil"
+  },
+  "84": {
+    "name_th": "เบลีซ",
+    "name_en": "Belize"
+  },
+  "86": {
+    "name_th": "บริติชอินเดียนโอเชียนเทร์ริทอรี",
+    "name_en": "British Indian Ocean Territory"
+  },
+  "90": {
+    "name_th": "หมู่เกาะโซโลมอน",
+    "name_en": "Solomon Islands"
+  },
+  "92": {
+    "name_th": "หมู่เกาะบริติชเวอร์จิน",
+    "name_en": "British Virgin Islands"
+  },
+  "96": {
+    "name_th": "บรูไน",
+    "name_en": "Brunei Darussalam"
+  },
+  "100": {
+    "name_th": "บัลแกเรีย",
+    "name_en": "Bulgaria"
+  },
+  "104": {
+    "name_th": "พม่า",
+    "name_en": "Myanmar"
+  },
+  "108": {
+    "name_th": "บุรุนดี",
+    "name_en": "Burundi"
+  },
+  "112": {
+    "name_th": "เบลารุส",
+    "name_en": "Belarus"
+  },
+  "116": {
+    "name_th": "กัมพูชา",
+    "name_en": "Cambodia"
+  },
+  "120": {
+    "name_th": "แคเมอรูน",
+    "name_en": "Cameroon"
+  },
+  "124": {
+    "name_th": "แคนาดา",
+    "name_en": "Canada"
+  },
+  "132": {
+    "name_th": "กาบูเวร์ดี",
+    "name_en": "Cabo Verde"
+  },
+  "136": {
+    "name_th": "หมู่เกาะเคย์แมน",
+    "name_en": "Cayman Islands"
+  },
+  "140": {
+    "name_th": "สาธารณรัฐแอฟริกากลาง",
+    "name_en": "Central African Republic"
+  },
+  "144": {
+    "name_th": "ศรีลังกา",
+    "name_en": "Sri Lanka"
+  },
+  "148": {
+    "name_th": "ชาด",
+    "name_en": "Chad"
+  },
+  "152": {
+    "name_th": "ชิลี",
+    "name_en": "Chile"
+  },
+  "156": {
+    "name_th": "จีน",
+    "name_en": "China"
+  },
+  "158": {
+    "name_th": "ไต้หวัน",
+    "name_en": "Taiwan"
+  },
+  "162": {
+    "name_th": "เกาะคริสต์มาส",
+    "name_en": "Christmas Island"
+  },
+  "166": {
+    "name_th": "หมู่เกาะโคโคส",
+    "name_en": "Cocos (Keeling) Islands"
+  },
+  "170": {
+    "name_th": "โคลอมเบีย",
+    "name_en": "Colombia"
+  },
+  "174": {
+    "name_th": "คอโมโรส",
+    "name_en": "Comoros"
+  },
+  "175": {
+    "name_th": "มายอต",
+    "name_en": "Mayotte"
+  },
+  "178": {
+    "name_th": "สาธารณรัฐคองโก",
+    "name_en": "Republic of the Congo"
+  },
+  "180": {
+    "name_th": "สาธารณรัฐประชาธิปไตยคองโก",
+    "name_en": "Democratic Republic of the Congo"
+  },
+  "184": {
+    "name_th": "หมู่เกาะคุก",
+    "name_en": "Cook Islands"
+  },
+  "188": {
+    "name_th": "คอสตาริกา",
+    "name_en": "Costa Rica"
+  },
+  "191": {
+    "name_th": "โครเอเชีย",
+    "name_en": "Croatia"
+  },
+  "192": {
+    "name_th": "คิวบา",
+    "name_en": "Cuba"
+  },
+  "196": {
+    "name_th": "ไซปรัส",
+    "name_en": "Cyprus"
+  },
+  "203": {
+    "name_th": "เช็กเกีย",
+    "name_en": "Czech Republic"
+  },
+  "204": {
+    "name_th": "เบนิน",
+    "name_en": "Benin"
+  },
+  "208": {
+    "name_th": "เดนมาร์ก",
+    "name_en": "Denmark"
+  },
+  "212": {
+    "name_th": "ดอมินีกา",
+    "name_en": "Dominica"
+  },
+  "214": {
+    "name_th": "สาธารณรัฐโดมินิกัน",
+    "name_en": "Dominican Republic"
+  },
+  "218": {
+    "name_th": "เอกวาดอร์",
+    "name_en": "Ecuador"
+  },
+  "222": {
+    "name_th": "เอลซัลวาดอร์",
+    "name_en": "El Salvador"
+  },
+  "226": {
+    "name_th": "อิเควทอเรียลกินี",
+    "name_en": "Equatorial Guinea"
+  },
+  "231": {
+    "name_th": "เอธิโอเปีย",
+    "name_en": "Ethiopia"
+  },
+  "232": {
+    "name_th": "เอริเทรีย",
+    "name_en": "Eritrea"
+  },
+  "233": {
+    "name_th": "เอสโตเนีย",
+    "name_en": "Estonia"
+  },
+  "234": {
+    "name_th": "หมู่เกาะแฟโร",
+    "name_en": "Faroe Islands"
+  },
+  "238": {
+    "name_th": "หมู่เกาะฟอล์กแลนด์",
+    "name_en": "Falkland Islands"
+  },
+  "239": {
+    "name_th": "เกาะเซาท์จอร์เจียและหมู่เกาะเซาท์แซนด์วิช",
+    "name_en": "South Georgia and the South Sandwich Islands"
+  },
+  "242": {
+    "name_th": "ฟีจี",
+    "name_en": "Fiji"
+  },
+  "246": {
+    "name_th": "ฟินแลนด์",
+    "name_en": "Finland"
+  },
+  "248": {
+    "name_th": "หมู่เกาะโอลันด์",
+    "name_en": "Åland Islands"
+  },
+  "250": {
+    "name_th": "ฝรั่งเศส",
+    "name_en": "France"
+  },
+  "254": {
+    "name_th": "เฟรนช์เกียนา",
+    "name_en": "French Guiana"
+  },
+  "258": {
+    "name_th": "เฟรนช์พอลินีเชีย",
+    "name_en": "French Polynesia"
+  },
+  "260": {
+    "name_th": "เฟรนช์เซาเทิร์นและแอนตาร์กติกแลนดส์",
+    "name_en": "French Southern Territories"
+  },
+  "262": {
+    "name_th": "จิบูตี",
+    "name_en": "Djibouti"
+  },
+  "266": {
+    "name_th": "กาบอง",
+    "name_en": "Gabon"
+  },
+  "268": {
+    "name_th": "จอร์เจีย",
+    "name_en": "Georgia"
+  },
+  "270": {
+    "name_th": "แกมเบีย",
+    "name_en": "Gambia"
+  },
+  "275": {
+    "name_th": "ปาเลสไตน์",
+    "name_en": "Palestine"
+  },
+  "276": {
+    "name_th": "เยอรมนี",
+    "name_en": "Germany"
+  },
+  "288": {
+    "name_th": "กานา",
+    "name_en": "Ghana"
+  },
+  "292": {
+    "name_th": "ยิบรอลตาร์",
+    "name_en": "Gibraltar"
+  },
+  "296": {
+    "name_th": "คิริบาส",
+    "name_en": "Kiribati"
+  },
+  "300": {
+    "name_th": "กรีซ",
+    "name_en": "Greece"
+  },
+  "304": {
+    "name_th": "กรีนแลนด์",
+    "name_en": "Greenland"
+  },
+  "308": {
+    "name_th": "เกรเนดา",
+    "name_en": "Grenada"
+  },
+  "312": {
+    "name_th": "กัวเดอลุป",
+    "name_en": "Guadeloupe"
+  },
+  "316": {
+    "name_th": "กวม",
+    "name_en": "Guam"
+  },
+  "320": {
+    "name_th": "กัวเตมาลา",
+    "name_en": "Guatemala"
+  },
+  "324": {
+    "name_th": "กินี",
+    "name_en": "Guinea"
+  },
+  "328": {
+    "name_th": "กายอานา",
+    "name_en": "Guyana"
+  },
+  "332": {
+    "name_th": "เฮติ",
+    "name_en": "Haiti"
+  },
+  "334": {
+    "name_th": "เกาะเฮิร์ดและหมู่เกาะแมกดอนัลด์",
+    "name_en": "Heard Island and McDonald Islands"
+  },
+  "336": {
+    "name_th": "นครรัฐวาติกัน",
+    "name_en": "Vatican City State"
+  },
+  "340": {
+    "name_th": "ฮอนดูรัส",
+    "name_en": "Honduras"
+  },
+  "344": {
+    "name_th": "ฮ่องกง",
+    "name_en": "Hong Kong"
+  },
+  "348": {
+    "name_th": "ฮังการี",
+    "name_en": "Hungary"
+  },
+  "352": {
+    "name_th": "ไอซ์แลนด์",
+    "name_en": "Iceland"
+  },
+  "356": {
+    "name_th": "อินเดีย",
+    "name_en": "India"
+  },
+  "360": {
+    "name_th": "อินโดนีเซีย",
+    "name_en": "Indonesia"
+  },
+  "364": {
+    "name_th": "อิหร่าน",
+    "name_en": "Iran"
+  },
+  "368": {
+    "name_th": "อิรัก",
+    "name_en": "Iraq"
+  },
+  "372": {
+    "name_th": "ไอร์แลนด์",
+    "name_en": "Ireland"
+  },
+  "376": {
+    "name_th": "อิสราเอล",
+    "name_en": "Israel"
+  },
+  "380": {
+    "name_th": "อิตาลี",
+    "name_en": "Italy"
+  },
+  "384": {
+    "name_th": "โกตดิวัวร์",
+    "name_en": "Côte d'Ivoire"
+  },
+  "388": {
+    "name_th": "จาเมกา",
+    "name_en": "Jamaica"
+  },
+  "392": {
+    "name_th": "ญี่ปุ่น",
+    "name_en": "Japan"
+  },
+  "398": {
+    "name_th": "คาซัคสถาน",
+    "name_en": "Kazakhstan"
+  },
+  "400": {
+    "name_th": "จอร์แดน",
+    "name_en": "Jordan"
+  },
+  "404": {
+    "name_th": "เคนยา",
+    "name_en": "Kenya"
+  },
+  "408": {
+    "name_th": "เกาหลีเหนือ",
+    "name_en": "North Korea"
+  },
+  "410": {
+    "name_th": "เกาหลีใต้",
+    "name_en": "South Korea"
+  },
+  "414": {
+    "name_th": "คูเวต",
+    "name_en": "Kuwait"
+  },
+  "417": {
+    "name_th": "คีร์กีซสถาน",
+    "name_en": "Kyrgyzstan"
+  },
+  "418": {
+    "name_th": "ลาว",
+    "name_en": "Laos"
+  },
+  "422": {
+    "name_th": "เลบานอน",
+    "name_en": "Lebanon"
+  },
+  "426": {
+    "name_th": "เลโซโท",
+    "name_en": "Lesotho"
+  },
+  "428": {
+    "name_th": "ลัตเวีย",
+    "name_en": "Latvia"
+  },
+  "430": {
+    "name_th": "ไลบีเรีย",
+    "name_en": "Liberia"
+  },
+  "434": {
+    "name_th": "ลิเบีย",
+    "name_en": "Libya"
+  },
+  "438": {
+    "name_th": "ลิกเตนสไตน์",
+    "name_en": "Liechtenstein"
+  },
+  "440": {
+    "name_th": "ลิทัวเนีย",
+    "name_en": "Lithuania"
+  },
+  "442": {
+    "name_th": "ลักเซมเบิร์ก",
+    "name_en": "Luxembourg"
+  },
+  "446": {
+    "name_th": "มาเก๊า",
+    "name_en": "Macao"
+  },
+  "450": {
+    "name_th": "มาดากัสการ์",
+    "name_en": "Madagascar"
+  },
+  "454": {
+    "name_th": "มาลาวี",
+    "name_en": "Malawi"
+  },
+  "458": {
+    "name_th": "มาเลเซีย",
+    "name_en": "Malaysia"
+  },
+  "462": {
+    "name_th": "มัลดีฟส์",
+    "name_en": "Maldives"
+  },
+  "466": {
+    "name_th": "มาลี",
+    "name_en": "Mali"
+  },
+  "470": {
+    "name_th": "มอลตา",
+    "name_en": "Malta"
+  },
+  "474": {
+    "name_th": "มาร์ตีนิก",
+    "name_en": "Martinique"
+  },
+  "478": {
+    "name_th": "มอริเตเนีย",
+    "name_en": "Mauritania"
+  },
+  "480": {
+    "name_th": "มอริเชียส",
+    "name_en": "Mauritius"
+  },
+  "484": {
+    "name_th": "เม็กซิโก",
+    "name_en": "Mexico"
+  },
+  "492": {
+    "name_th": "โมนาโก",
+    "name_en": "Monaco"
+  },
+  "496": {
+    "name_th": "มองโกเลีย",
+    "name_en": "Mongolia"
+  },
+  "498": {
+    "name_th": "มอลโดวา",
+    "name_en": "Moldova"
+  },
+  "499": {
+    "name_th": "มอนเตเนโกร",
+    "name_en": "Montenegro"
+  },
+  "500": {
+    "name_th": "มอนต์เซอร์รัต",
+    "name_en": "Montserrat"
+  },
+  "504": {
+    "name_th": "โมร็อกโก",
+    "name_en": "Morocco"
+  },
+  "508": {
+    "name_th": "โมซัมบิก",
+    "name_en": "Mozambique"
+  },
+  "512": {
+    "name_th": "โอมาน",
+    "name_en": "Oman"
+  },
+  "516": {
+    "name_th": "นามิเบีย",
+    "name_en": "Namibia"
+  },
+  "520": {
+    "name_th": "นาอูรู",
+    "name_en": "Nauru"
+  },
+  "524": {
+    "name_th": "เนปาล",
+    "name_en": "Nepal"
+  },
+  "528": {
+    "name_th": "เนเธอร์แลนด์",
+    "name_en": "Netherlands"
+  },
+  "531": {
+    "name_th": "กือราเซา",
+    "name_en": "Curaçao"
+  },
+  "533": {
+    "name_th": "อารูบา",
+    "name_en": "Aruba"
+  },
+  "534": {
+    "name_th": "ซินต์มาร์เติน",
+    "name_en": "Sint Maarten"
+  },
+  "535": {
+    "name_th": "เนเธอร์แลนด์แคริบเบียน",
+    "name_en": "Bonaire, Sint Eustatius and Saba"
+  },
+  "540": {
+    "name_th": "นิวแคลิโดเนีย",
+    "name_en": "New Caledonia"
+  },
+  "548": {
+    "name_th": "วานูวาตู",
+    "name_en": "Vanuatu"
+  },
+  "554": {
+    "name_th": "นิวซีแลนด์",
+    "name_en": "New Zealand"
+  },
+  "558": {
+    "name_th": "นิการากัว",
+    "name_en": "Nicaragua"
+  },
+  "562": {
+    "name_th": "ไนเจอร์",
+    "name_en": "Niger"
+  },
+  "566": {
+    "name_th": "ไนจีเรีย",
+    "name_en": "Nigeria"
+  },
+  "570": {
+    "name_th": "นีวเว",
+    "name_en": "Niue"
+  },
+  "574": {
+    "name_th": "เกาะนอร์ฟอล์ก",
+    "name_en": "Norfolk Island"
+  },
+  "578": {
+    "name_th": "นอร์เวย์",
+    "name_en": "Norway"
+  },
+  "580": {
+    "name_th": "หมู่เกาะนอร์เทิร์นมาเรียนา",
+    "name_en": "Northern Mariana Islands"
+  },
+  "581": {
+    "name_th": "เกาะเล็กรอบนอกของสหรัฐอเมริกา",
+    "name_en": "United States Minor Outlying Islands"
+  },
+  "583": {
+    "name_th": "ไมโครนีเซีย",
+    "name_en": "Micronesia"
+  },
+  "584": {
+    "name_th": "หมู่เกาะมาร์แชลล์",
+    "name_en": "Marshall Islands"
+  },
+  "585": {
+    "name_th": "ปาเลา",
+    "name_en": "Palau"
+  },
+  "586": {
+    "name_th": "ปากีสถาน",
+    "name_en": "Pakistan"
+  },
+  "591": {
+    "name_th": "ปานามา",
+    "name_en": "Panama"
+  },
+  "598": {
+    "name_th": "ปาปัวนิวกินี",
+    "name_en": "Papua New Guinea"
+  },
+  "600": {
+    "name_th": "ปารากวัย",
+    "name_en": "Paraguay"
+  },
+  "604": {
+    "name_th": "เปรู",
+    "name_en": "Peru"
+  },
+  "608": {
+    "name_th": "ฟิลิปปินส์",
+    "name_en": "Philippines"
+  },
+  "612": {
+    "name_th": "หมู่เกาะพิตแคร์น",
+    "name_en": "Pitcairn"
+  },
+  "616": {
+    "name_th": "โปแลนด์",
+    "name_en": "Poland"
+  },
+  "620": {
+    "name_th": "โปรตุเกส",
+    "name_en": "Portugal"
+  },
+  "624": {
+    "name_th": "กินี-บิสเซา",
+    "name_en": "Guinea-Bissau"
+  },
+  "626": {
+    "name_th": "ติมอร์-เลสเต",
+    "name_en": "Timor-Leste"
+  },
+  "630": {
+    "name_th": "ปวยร์โตรีโก",
+    "name_en": "Puerto Rico"
+  },
+  "634": {
+    "name_th": "กาตาร์",
+    "name_en": "Qatar"
+  },
+  "638": {
+    "name_th": "เรอูว์นียง",
+    "name_en": "Réunion"
+  },
+  "642": {
+    "name_th": "โรมาเนีย",
+    "name_en": "Romania"
+  },
+  "643": {
+    "name_th": "รัสเซีย",
+    "name_en": "Russian Federation"
+  },
+  "646": {
+    "name_th": "รวันดา",
+    "name_en": "Rwanda"
+  },
+  "652": {
+    "name_th": "แซงบาร์เตเลมี",
+    "name_en": "Saint Barthélemy"
+  },
+  "654": {
+    "name_th": "เซนต์เฮเลนา",
+    "name_en": "Saint Helena, Ascension and Tristan da Cunha"
+  },
+  "659": {
+    "name_th": "เซนต์คิตส์และเนวิส",
+    "name_en": "Saint Kitts and Nevis"
+  },
+  "660": {
+    "name_th": "แองกวิลลา",
+    "name_en": "Anguilla"
+  },
+  "662": {
+    "name_th": "เซนต์ลูเชีย",
+    "name_en": "Saint Lucia"
+  },
+  "663": {
+    "name_th": "แซงมาร์แตง",
+    "name_en": "Saint Martin"
+  },
+  "666": {
+    "name_th": "แซงปีแยร์และมีเกอลง",
+    "name_en": "Saint Pierre and Miquelon"
+  },
+  "670": {
+    "name_th": "เซนต์วินเซนต์และเกรนาดีนส์",
+    "name_en": "Saint Vincent and the Grenadines"
+  },
+  "674": {
+    "name_th": "ซานมารีโน",
+    "name_en": "San Marino"
+  },
+  "678": {
+    "name_th": "เซาตูเมและปรินซีปี",
+    "name_en": "Sao Tome and Principe"
+  },
+  "682": {
+    "name_th": "ซาอุดีอาระเบีย",
+    "name_en": "Saudi Arabia"
+  },
+  "686": {
+    "name_th": "เซเนกัล",
+    "name_en": "Senegal"
+  },
+  "688": {
+    "name_th": "เซอร์เบีย",
+    "name_en": "Serbia"
+  },
+  "690": {
+    "name_th": "เซเชลส์",
+    "name_en": "Seychelles"
+  },
+  "694": {
+    "name_th": "เซียร์ราลีโอน",
+    "name_en": "Sierra Leone"
+  },
+  "702": {
+    "name_th": "สิงคโปร์",
+    "name_en": "Singapore"
+  },
+  "703": {
+    "name_th": "สโลวาเกีย",
+    "name_en": "Slovakia"
+  },
+  "704": {
+    "name_th": "เวียดนาม",
+    "name_en": "Vietnam"
+  },
+  "705": {
+    "name_th": "สโลวีเนีย",
+    "name_en": "Slovenia"
+  },
+  "706": {
+    "name_th": "โซมาเลีย",
+    "name_en": "Somalia"
+  },
+  "710": {
+    "name_th": "แอฟริกาใต้",
+    "name_en": "South Africa"
+  },
+  "716": {
+    "name_th": "ซิมบับเว",
+    "name_en": "Zimbabwe"
+  },
+  "724": {
+    "name_th": "สเปน",
+    "name_en": "Spain"
+  },
+  "728": {
+    "name_th": "เกาะเซาท์จอร์เจียและหมู่เกาะเซาท์แซนด์วิช",
+    "name_en": "South Sudan"
+  },
+  "732": {
+    "name_th": "ซาฮาราตะวันตก",
+    "name_en": "Western Sahara"
+  },
+  "736": {
+    "name_th": "ซูดาน",
+    "name_en": "Sudan"
+  },
+  "740": {
+    "name_th": "ซูรินาม",
+    "name_en": "Suriname"
+  },
+  "744": {
+    "name_th": "สฟาลบาร์และยานไมเอน",
+    "name_en": "Svalbard and Jan Mayen"
+  },
+  "748": {
+    "name_th": "สวาซิแลนด์",
+    "name_en": "Swaziland"
+  },
+  "752": {
+    "name_th": "สวีเดน",
+    "name_en": "Sweden"
+  },
+  "756": {
+    "name_th": "สวิตเซอร์แลนด์",
+    "name_en": "Switzerland"
+  },
+  "760": {
+    "name_th": "ซีเรีย",
+    "name_en": "Syrian Arab Republic"
+  },
+  "762": {
+    "name_th": "ทาจิกิสถาน",
+    "name_en": "Tajikistan"
+  },
+  "764": {
+    "name_th": "ไทย",
+    "name_en": "Thailand"
+  },
+  "768": {
+    "name_th": "โตโก",
+    "name_en": "Togo"
+  },
+  "772": {
+    "name_th": "โทเคอเลา",
+    "name_en": "Tokelau"
+  },
+  "776": {
+    "name_th": "ตองงา",
+    "name_en": "Tonga"
+  },
+  "780": {
+    "name_th": "ตรินิแดดและโตเบโก",
+    "name_en": "Trinidad and Tobago"
+  },
+  "784": {
+    "name_th": "สหรัฐอาหรับเอมิเรตส์",
+    "name_en": "United Arab Emirates"
+  },
+  "788": {
+    "name_th": "ตูนิเซีย",
+    "name_en": "Tunisia"
+  },
+  "792": {
+    "name_th": "ตุรกี",
+    "name_en": "Turkey"
+  },
+  "795": {
+    "name_th": "เติร์กเมนิสถาน",
+    "name_en": "Turkmenistan"
+  },
+  "796": {
+    "name_th": "หมู่เกาะเติกส์และเคคอส",
+    "name_en": "Turks and Caicos Islands"
+  },
+  "798": {
+    "name_th": "ตูวาลู",
+    "name_en": "Tuvalu"
+  },
+  "800": {
+    "name_th": "ยูกันดา",
+    "name_en": "Uganda"
+  },
+  "804": {
+    "name_th": "ยูเครน",
+    "name_en": "Ukraine"
+  },
+  "807": {
+    "name_th": "นอร์ทมาซิโดเนีย",
+    "name_en": "North Macedonia"
+  },
+  "818": {
+    "name_th": "อียิปต์",
+    "name_en": "Egypt"
+  },
+  "826": {
+    "name_th": "สหราชอาณาจักร",
+    "name_en": "United Kingdom of Great Britain and Northern Ireland"
+  },
+  "831": {
+    "name_th": "เกิร์นซีย์",
+    "name_en": "Guernsey"
+  },
+  "832": {
+    "name_th": "เจอร์ซีย์",
+    "name_en": "Jersey"
+  },
+  "833": {
+    "name_th": "ไอล์ออฟแมน",
+    "name_en": "Isle of Man"
+  },
+  "834": {
+    "name_th": "แทนซาเนีย",
+    "name_en": "Tanzania"
+  },
+  "840": {
+    "name_th": "สหรัฐ",
+    "name_en": "United States of America"
+  },
+  "850": {
+    "name_th": "หมู่เกาะเวอร์จินของสหรัฐอเมริกา",
+    "name_en": "United States Virgin Islands"
+  },
+  "854": {
+    "name_th": "บูร์กินาฟาโซ",
+    "name_en": "Burkina Faso"
+  },
+  "858": {
+    "name_th": "อุรุกวัย",
+    "name_en": "Uruguay"
+  },
+  "860": {
+    "name_th": "อุซเบกิสถาน",
+    "name_en": "Uzbekistan"
+  },
+  "862": {
+    "name_th": "เวเนซุเอลา",
+    "name_en": "Venezuela"
+  },
+  "876": {
+    "name_th": "วาลิสและฟูตูนา",
+    "name_en": "Wallis and Futuna"
+  },
+  "882": {
+    "name_th": "ซามัว",
+    "name_en": "Samoa"
+  },
+  "887": {
+    "name_th": "เยเมน",
+    "name_en": "Yemen"
+  },
+  "894": {
+    "name_th": "แซมเบีย",
+    "name_en": "Zambia"
+  }
+}
