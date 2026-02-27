@@ -98,7 +98,7 @@ def main():
         'last_name_en': 'XXXXXXX', # ผ่าน
         'first_name_en': 'XXXXXXX', # ผ่าน
         'full_name_th': 'XXXXXXX', # ผ่าน
-        'nationality': 'XXXXXXX', # ผ่าน แต่ All_nationality ต้องแยกใส่ใน Json
+        'nationality': 'XXXXXXX', # ผ่าน
         'date_of_birth': 'XXXXXXX', # ผ่าน
         'sex': 'XXXXXXX', # ผ่าน
         'height': 'XXXXXXX', # ผ่าน

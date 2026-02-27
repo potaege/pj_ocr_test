@@ -129,7 +129,7 @@ def receive_born_certification_ocr_data(ocr_data: dict):
 def main():
     
     ls = {
-    "full_name_th":               'XXXXXXX', # แก้ Crop
+    "full_name_th":               'XXXXXXX', # ผ่าน
     "identification_no":          'XXXXXXX', # ผ่าน
     "sex":                        'XXXXXXX', # ผ่าน
     "nationality":                'XXXXXXX', # ผ่าน
@@ -137,16 +137,16 @@ def main():
     "place_of_birth":             'XXXXXXX', # ผ่าน
     "being_the_child_no":         'XXXXXXX', # ผ่าน
     "birth_delivery_person":      'XXXXXXX', # ผ่าน
-    "weight_at_birth":            'XXXXXXX', # แก้ Crop
+    "weight_at_birth":            'XXXXXXX', # ผ่าน
     "house_registration_add":     'XXXXXXX', # ผ่าน
     "mother_name_th":             'XXXXXXX', # ผ่าน
     "mother_identification_no":   'XXXXXXX', # ผ่าน
-    "mother_province_of_birth":   'XXXXXXX', # แก้ Crop
-    "mother_country_of_birth":    'XXXXXXX', # แก้ Crop
-    "father_name_th":             'XXXXXXX', # แก้ Crop
+    "mother_province_of_birth":   'XXXXXXX', # ผ่าน
+    "mother_country_of_birth":    'XXXXXXX', # ผ่าน
+    "father_name_th":             'XXXXXXX', # ผ่าน
     "father_identification_no":   'XXXXXXX', # ผ่าน
-    "father_province_of_birth":   'XXXXXXX', # แก้ Crop
-    "father_country_of_birth":    'XXXXXXX', # แก้ Crop
+    "father_province_of_birth":   'XXXXXXX', # ผ่าน
+    "father_country_of_birth":    'XXXXXXX', # ผ่าน
     "registry_office":            'XXXXXXX', # ผ่าน
     "date_of_birth_registration": 'XXXXXXX', # ผ่าน
     }
